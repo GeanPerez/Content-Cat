@@ -1,0 +1,14 @@
+--- 
+services: 
+  app: 
+    image: revo31/contentcat:final
+    ports: 
+      - "5000"
+  nginx: 
+    depends_on: 
+      - app
+    image: 832577785179.dkr.ecr.us-east-1.amazonaws.com/contentcatwebapp:nginxcontentcatwebapp
+    ports: 
+      - "80:80"
+version: "3"
+
